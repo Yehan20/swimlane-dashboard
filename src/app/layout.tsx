@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+
 import Header from "@/components/Header";
+import Sidebar from "@/components/Sidebar";
 
 
 
 
 const poppins = Poppins({
   variable: "--font-poppins",
-  subsets:['latin'],
-  weight:['100','200','300','400','500','600','700','800','900'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 
 });
 
 export const metadata: Metadata = {
   title: "Swimlane",
-  description: "Swimlane",
+  description: "Dashboard",
 };
 
 export default function RootLayout({
@@ -28,13 +29,14 @@ export default function RootLayout({
       <body
         className={`${poppins.variable}  antialiased`}
       >
-        <div className="flex min-h-screen">
-          <Header />
-      
+  
+          <div className="flex min-h-screen">
+            <Header />
+            <Sidebar />
 
-          <main className="flex-1">{children}</main>
+            <main className="flex-1">{children}</main>
 
-        </div>
+          </div>
 
       </body>
     </html>
