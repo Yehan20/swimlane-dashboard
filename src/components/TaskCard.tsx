@@ -1,5 +1,5 @@
 
-import profile from '../assets/images/Vector.png'
+import profile from '../assets/images/User-Profile.png'
 import placeholder from '../assets/images/placeholder.png'
 
 import Image from "next/image";
@@ -48,13 +48,14 @@ export default function TaskCard({ task }: TaskCardProps) {
                 </button>
             </div>
 
-            <h3 className="text-sm font-semibold my-2">{task.title}</h3>
+            <h3 className="text-sm font-semibold my-2">{task.title} #{task.id}</h3>
 
+            {/* Render collaborators */}
             <div className="flex mb-3 items-center">
                 {Array(task.collaborators).fill(task.collaborators).slice(0, 3).map((d, index) => {
-                    return <span key={index} className="flex justify-center p-2  overflow-hidden bg-black rounded-full border border-white  -mr-2">
-                        <Image width={8} height={8} className="object-contain" src={profile} alt="placeholder image" />
-                    </span>
+                    return <span key={index} className="flex justify-center overflow-hiddenrounded-full border border-white rounded-full  -mr-2">
+                        <Image className='w-full'  src={profile} alt="placeholder image" />
+                    </span> 
                 })}
 
                 {task.collaborators && task.collaborators > 3 &&

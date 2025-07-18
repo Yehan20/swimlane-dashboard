@@ -1,6 +1,7 @@
 # Swimlane Dashboard
 
 ## Project Description
+
 Friendly and Simple dashboard to complete tasks
 -  demo [https://swimlane-db.netlify.app/](https://swimlane-db.netlify.app/)
 
@@ -18,7 +19,7 @@ Friendly and Simple dashboard to complete tasks
 - Frontend: Next Js with TypeScript
 - State management: Zustand
 - Database: Local Storage 
-- CSS Framework: Tailwind css
+- CSS Framework: Tailwind CSS
 
 
 ## Setup Instructions
@@ -67,7 +68,8 @@ git remote add origin https://github.com/<your-github-username>/<your-repo-name>
    ```
 
    The frontend will be available at `http://localhost:3000`.
-  
+
+3. You can update the tasks.json file to add new items  
 
 
 
@@ -83,7 +85,5 @@ This project is deployed using the following free services:
 You can learn more about deployment from the official documentation:
 
 - [Netlify Docs (Frontend Hosting)](https://docs.netlify.com/)
-
-
 
 

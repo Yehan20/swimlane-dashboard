@@ -12,7 +12,7 @@ import { AiOutlineMessage } from "react-icons/ai";
 import { LuUserRound } from "react-icons/lu";
 import { BsCalendar2Range } from "react-icons/bs";
 
-import profileImage from '../assets/images/User profile.png';
+import profileImage from '../assets/images/User-Profile.png';
 import { MenuItem } from "@/types/types";
 
 
@@ -156,7 +156,7 @@ export default function Sidebar({ isMobileOpen, toggleMobileSidebar }: SidebarPr
 
       {/* Mobile Sidebar start */}
       <div
-        className={`w-64  bg-white shadow top-0 bottom-0  flex flex-col h-screen  overflow-auto justify-between z-50 fixed transition-transform duration-150 ease-in-out ${isMobileOpen ? "translate-x-0" : "-translate-x-full"} md:hidden`}
+        className={`w-[275px]  bg-white shadow top-0 bottom-0  flex flex-col h-screen  overflow-auto justify-between z-50 fixed transition-transform duration-150 ease-in-out ${isMobileOpen ? "translate-x-0" : "-translate-x-full"} md:hidden`}
       >
 
         {/* Mobile side bar top */}
