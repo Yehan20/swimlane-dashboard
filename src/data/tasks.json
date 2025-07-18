@@ -1,0 +1,49 @@
+[
+  {
+    "id": "1",
+    "title": "Research",
+    "dueDate": "2025-07-19",
+    "priority": "Low",
+    "category": "Research",
+    "comments": 2,
+    "status": "To Do",
+    "thumbnail": true,
+    "collaborators": 3,
+    "notificationType": "Group Call"
+  },
+  {
+    "id": "2",
+    "title": "UI Design",
+    "dueDate": "2025-07-19",
+    "priority": "High",
+    "comments": 1,
+    "category": "Research",
+    "status": "In Progress",
+    "collaborators": 6
+  },
+  {
+    "id": "3",
+    "title": "Prototype",
+    "dueDate": "2025-05-24",
+    "priority": "Medium",
+    "comments": 2,
+    "category": "Research",
+    "status": "Approved",
+    "collaborators": 4,
+    "image": "/images/cat.jpg",
+    "reports": 8,
+    "notificationType": "Group Call"
+  },
+  {
+    "id": "4",
+    "title": "Group Management",
+    "dueDate": "2025-05-29",
+    "priority": "Low",
+    "comments": 2,
+    "category": "Research",
+    "status": "Reject",
+    "collaborators": 8,
+    "reports": 8,
+    "notificationType": "Stream"
+  }
+]
