@@ -4,15 +4,30 @@
 @theme  {
 
 
-     --color-custom-gray: '#F5F7FA',
-     --color-custom-orange: '#F4A261',
-     --color-custom-green: '#2ECC71',
-     --color-custom-red: '#E74C3C',
-     --color-neutral-500:'#B1B5C3';
-     --color-neutral-600:'#E6E8EC';
+     --color-custom-gray: #F5F7FA;
+     --color-custom-red: #E74C3C;
+     --color-neutral-5:#B1B5C3;
+     --color-neutral-6:#E6E8EC;
+     --color-neutral-7:#F4F5F6;
+     --color-neutral-4:#777E90;
+
+     --color-green:#AEE753;
+     --color-red:#F90430;
+     --color-blue:#3772FF;
+     --color-orange:#FFA800;
+
+     --text-xxs:8px;
 
 
 }
+
+
+.container {
+  max-width: 1280px;
+ 
+}
+
+
 
 
 body {
@@ -21,4 +36,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-family: 'Poppins',sans-serif;
+}
+a{
+  @apply transition-all ease-in
 }
