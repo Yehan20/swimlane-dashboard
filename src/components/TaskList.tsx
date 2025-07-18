@@ -37,7 +37,7 @@ export default function TaskList({ status, tasks }: TaskListProps) {
     return (
         <div
             className={`
-        border-r  border-[#E6E8EC] 
+        border-r  border-neutral-6 
         h-full
         bg-[#F4F5F6]
         `}
@@ -45,7 +45,7 @@ export default function TaskList({ status, tasks }: TaskListProps) {
             onDragOver={handleDragOver}
         >
             <div className="py-3 px-4 flex justify-between mb-4  bg-white  ">
-                <h2 className={`text-sm font-medium rounded-2xl px-6 py-1 min-w-[100px]  ${bg} ${text}`}>{status}</h2>
+                <h2 className={`text-sm font-medium rounded-2xl px-6 py-[6px] min-w-[80px]  ${bg} ${text}`}>{status}</h2>
                 <div className="flex gap-2">
                     <button className="cursor-pointer hover:opacity-80">
                         <FaPlus />
