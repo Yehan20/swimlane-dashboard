@@ -4,7 +4,7 @@
 import searchIcon from '../assets/images/Search.png'
 import bellIcon from '../assets/images/bell.png'
 import settingsIcon from '../assets/images/Settings.png'
-import profileIcon from '../assets/images/User profile.png'
+import profileIcon from '../assets/images/User-Profile.png'
 import logo from '../assets/images/logo.png'
 
 import Image from "next/image";

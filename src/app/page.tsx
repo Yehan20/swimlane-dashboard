@@ -7,7 +7,7 @@ import Image from "next/image";
 import { format } from "date-fns";
 
 
-import placeholderImg from '../assets/images/User profile.png'
+import placeholderImg from '../assets/images/Vector.png'
 
 import { useTaskStore } from "@/providers/task-store-provider";
 import TaskList from "@/components/TaskList";
@@ -68,14 +68,14 @@ export default function Page() {
 
           <p className="text-neutral-5">Assigned</p>
           <div className="flex">
-            <span className="flex h-[25px] w-[25px] bg-black rounded-full border border-white  p-2 -mr-2">
-              <Image src={placeholderImg} alt="placeholder image" />
+            <span className="flex justify-center h-[25px] w-[25px] bg-black rounded-full border border-white   -mr-2">
+              <Image className="object-contain" src={placeholderImg} alt="placeholder image" />
             </span>
-            <span className="flex h-[25px] w-[25px] bg-black rounded-full border border-white  p-2 -mr-2">
-              <Image src={placeholderImg} alt="placeholder image" />
+            <span className="flex justify-center h-[25px] w-[25px] bg-black rounded-full border border-white   -mr-2">
+              <Image className="object-contain" src={placeholderImg} alt="placeholder image" />
             </span>
-            <span className="flex h-[25px] w-[25px] bg-black rounded-full border border-white  p-2 -mr-2">
-              <Image src={placeholderImg} alt="placeholder image" />
+            <span className="flex justify-center h-[25px] w-[25px] bg-black rounded-full border border-white   -mr-2">
+              <Image className="object-contain" src={placeholderImg} alt="placeholder image" />
             </span>
 
 
