@@ -1,0 +1,111 @@
+[
+  {
+    "id": "1",
+    "title": "Research",
+    "dueDate": "2025-07-19",
+    "priority": "Low",
+    "category": "Research",
+    "comments": 2,
+    "status": "To Do",
+    "thumbnail": true,
+    "collaborators": 3,
+    "notificationType": "Group Call"
+  },
+  {
+    "id": "2",
+    "title": "UI Design",
+    "dueDate": "2025-07-19",
+    "priority": "High",
+    "comments": 1,
+    "category": "Research",
+    "status": "In Progress",
+    "collaborators": 6
+  },
+  {
+    "id": "3",
+    "title": "Prototype",
+    "dueDate": "2025-05-24",
+    "priority": "Medium",
+    "comments": 2,
+    "category": "Research",
+    "status": "Approved",
+    "collaborators": 4,
+    "image": "/images/cat.jpg",
+    "reports": 8,
+    "notificationType": "Group Call"
+  },
+  {
+    "id": "4",
+    "title": "Group Management",
+    "dueDate": "2025-05-29",
+    "priority": "Low",
+    "comments": 2,
+    "category": "Research",
+    "status": "Reject",
+    "collaborators": 8,
+    "reports": 8,
+    "notificationType": "Stream"
+  },
+
+  {
+    "id": "5",
+    "title": "Database Schema Design",
+    "dueDate": "2025-07-25",
+    "priority": "High",
+    "category": "Development",
+    "status": "To Do",
+    "comments": 3,
+    "collaborators": 2,
+    "links": 1
+  
+  },
+  {
+    "id": "6",
+    "title": "Backend API Setup",
+    "dueDate": "2025-07-22",
+    "priority": "Medium",
+    "category": "Development",
+    "status": "In Progress",
+    "comments": 1,
+    "thumbnail": "/images/backend.png",
+    "collaborators": 3,
+    "notificationType": "Reminder"
+
+  },
+  {
+    "id": "7",
+    "title": "Client Feedback Session",
+    "dueDate": "2025-07-20",
+    "priority": "Low",
+    "category": "Meetings",
+    "status": "Approved",
+    "collaborators": 5,
+    "notificationType": "Meeting"
+  
+  },
+  {
+    "id": "8",
+    "title": "Test Case Writing",
+    "dueDate": "2025-07-21",
+    "priority": "Medium",
+    "category": "QA",
+    "status": "To Do",
+    "comments": 2,
+    "reports": 3,
+    "links": 2
+
+  },
+  {
+    "id": "9",
+    "title": "Deployment to Staging",
+    "dueDate": "2025-07-23",
+    "priority": "High",
+    "category": "DevOps",
+    "status": "In Progress",
+    "comments": 4,
+    "collaborators": 2,
+  
+    "notificationType": "Stream"
+ 
+  }
+]
