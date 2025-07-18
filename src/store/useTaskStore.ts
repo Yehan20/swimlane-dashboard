@@ -5,8 +5,10 @@ import { isToday, isTomorrow, parseISO, format } from "date-fns";
 
 // Types for state
 export type TaskState = {
-  tasks: Task[];
-  searchQuery: string;
+  tasks: Task[],
+  searchQuery: string,
+  loading: boolean,
+  lastUpdated:string|null,
 }
 
 // types of the actions in our store
@@ -14,6 +16,7 @@ export type TaskActions = {
   fetchTasks: () => Promise<void>;
   updateTaskStatus: (id: string, status: string) => void;
   setSearchQuery: (query: string) => void;
+
 
 }
 
@@ -23,6 +26,8 @@ export type TaskStore = TaskState & TaskActions;
 const defaultInitState: TaskState = {
   tasks: [],
   searchQuery: "",
+  loading: true,
+  lastUpdated:null,
 
 };
 
@@ -31,18 +36,24 @@ export const initTaskStore = (): TaskState => defaultInitState;
 
 // Creation of store must implement all methods in the  taskstore type
 export const createTaskStore = (initState: TaskState = defaultInitState) => {
-    
+
   return createStore<TaskStore>()((set, get) => ({
     ...initState,
+
+    // fetch tasks from api
     fetchTasks: async () => {
       try {
-        const response = await fetch("/api/tasks");
-        const data = await response.json();
+    
+        // Check if it exisits in storage if nto fetch it
         const localTasks = localStorage.getItem("tasks");
 
         if (localTasks) {
           set({ tasks: JSON.parse(localTasks) });
         } else {
+
+          const response = await fetch("/api/tasks");
+          const data = await response.json();
+
           const updatedTasks = data.map((task: Task) => {
             const date = parseISO(task.dueDate);
             let formattedDate;
@@ -67,9 +78,12 @@ export const createTaskStore = (initState: TaskState = defaultInitState) => {
         }
       } catch (error) {
         console.error("Failed to fetch tasks:", error);
+      }finally{
+         set({loading:false})
       }
     },
 
+    // Drag and drop update
     updateTaskStatus: (id, status) => {
       const updatedTasks = get().tasks.map(task =>
         task.id === id
@@ -77,6 +91,11 @@ export const createTaskStore = (initState: TaskState = defaultInitState) => {
           : task
       );
       localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+
+      const readableDate = format(new Date(), 'PPpp')
+
+      set({lastUpdated:readableDate})
+
       set({ tasks: updatedTasks });
     },
 

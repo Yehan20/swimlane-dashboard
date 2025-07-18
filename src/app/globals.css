@@ -3,13 +3,11 @@
 
 @theme  {
 
-
-     --color-custom-gray: #F5F7FA;
-     --color-custom-red: #E74C3C;
      --color-neutral-5:#B1B5C3;
      --color-neutral-6:#E6E8EC;
      --color-neutral-7:#F4F5F6;
      --color-neutral-4:#777E90;
+     --color-neutral-3:#353945;
 
      --color-green:#AEE753;
      --color-red:#F90430;
@@ -18,6 +16,8 @@
 
      --text-xxs:8px;
 
+     --breakpoint-md: 900px;
+     --breakpoint-lg: 1048px;
 
 }
 

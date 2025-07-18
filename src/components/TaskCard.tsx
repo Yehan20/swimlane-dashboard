@@ -12,7 +12,7 @@ import { RiErrorWarningLine } from "react-icons/ri";
 import { AiOutlineMessage } from "react-icons/ai";
 import { BsCalendar2Range } from "react-icons/bs";
 
-import { getCategoryStyle } from "@/utils";
+import { getCategoryStyle, getStatusStyle } from "@/utils";
 import { Task } from '@/types/types';
 
 
@@ -29,10 +29,13 @@ export default function TaskCard({ task }: TaskCardProps) {
 
     return (
         <div
-            className="bg-white p-3 rounded-lg shadow-sm border border-gray-200 cursor-move"
+            className="bg-white overflow-hidden relative p-3 rounded-lg border-2 border-neutral-6 cursor-move"
             draggable
             onDragStart={handleDragStart}
         >
+
+            {/* Colored stripe to show task status */}
+            <div className={` h-[3px] rounded absolute top-0 w-full left-0 ${getStatusStyle(task.status).bg}`}></div>
 
             <div className="flex  justify-between  items-center gap-2 text-neutral-5">
                 <div className="flex items-center gap-2">
@@ -55,12 +58,12 @@ export default function TaskCard({ task }: TaskCardProps) {
                 })}
 
                 {task.collaborators && task.collaborators > 3 &&
-                    <span className="flex items-center  h-[25px] w-[25px] bg-gray-200 rounded-full border border-white  p-2 -mr-2 text-[10px]">
+                    <span className="flex items-center justify-center font-semibold  h-[25px] w-[25px] bg-gray-200 rounded-full border border-white  p-2 -mr-2 text-[10px]">
                         +{task.collaborators - 3}
                     </span>
                 }
 
-                <div className="px-2 py-1 ml-4 flex items-center gap-1 rounded text-[8px] bg-neutral-7 text-neutral-5">
+                <div className="px-2 py-1 ml-4 flex items-center gap-1 rounded text-xs bg-neutral-7 text-neutral-5">
                     <RxLightningBolt />  {task.priority}
                 </div>
             </div>
@@ -68,10 +71,10 @@ export default function TaskCard({ task }: TaskCardProps) {
             {/* Conditioally render the image */}
             {task.thumbnail && <Image className="w-full rounded mb-3" src={placeholder} alt="Thumbnail" />}
 
-            <hr className="border-neutral-6 border-1 mb-3 " />
+            <hr className="border-neutral-6 border-1  mt-6 " />
 
             {/* Footer of the task */}
-            <div className="flex  gap-y-2 flex-wrap justify-between">
+            <div className="flex  gap-y-2 mt-3 flex-wrap gap-4">
                 <p className="flex font-medium gap-1 text-neutral-4 text-xs items-center">
                     <PiLinkSimple />
                     {task.collaborators}
