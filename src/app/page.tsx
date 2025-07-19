@@ -55,18 +55,18 @@ export default function Page() {
       {/* Home page header section */}
       <div className="bg-white pt-[155px] pb-4 px-6 md:pt-7 md:pb-6">
         <div className="flex items-center gap-5 mb-4">
-          <h1 className="font-semibold text-2xl">Sport Xi Project </h1>
+          <h1 className="font-semibold text-xl md:text-2xl">Sport Xi Project </h1>
           <span className=" rounded bg-orange font-medium text-xs px-3 py-1">
             In progress
           </span>
         </div>
-        <p className="text-neutral-5 mb-4">
+        <p className="text-neutral-5 mb-4 text-sm md:text-base">
           Event production
         </p>
 
-        <div className="flex mb-4 gap-6 items-center">
+        <div className="flex flex-wrap mb-4 gap-3 md:gap-6 items-center">
 
-          <p className="text-neutral-5">Assigned</p>
+          <p className="text-neutral-5 text-sm md:text-base">Assigned</p>
           <div className="flex">
             <span className="flex justify-center h-[25px] w-[25px] bg-black rounded-full border border-white   -mr-2">
               <Image className="object-contain" src={placeholderImg} alt="placeholder image" />
@@ -86,13 +86,13 @@ export default function Page() {
 
           </div>
 
-          <button className="rounded-3xl cursor-pointer text-base hover:opacity-80 py-[6px] border-2 text-neutral-5 gap-2 px-4 border-neutral-7 flex items-center">
+          <button className="rounded-3xl text-sm md:text-base cursor-pointer  hover:opacity-80 py-[6px] border-2 text-neutral-5 gap-2 px-4 border-neutral-7 flex items-center">
             Manage <FaPencil />
           </button>
         </div>
 
         <div className="hidden lg:block h-[1px] bg-[#E6E8EC]" />
-        <p className="md:mt-4 text-neutral-5">
+        <p className="md:mt-4 mb-3 md:mb-0 text-neutral-5 text-sm md:text-base">
           Last updated on: {lastUpdated ?? formatDate}
         </p>
       </div>
