@@ -1,6 +1,6 @@
 'use client'
 
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaChevronDown, FaChevronRight, FaChevronUp } from "react-icons/fa";
@@ -16,7 +16,7 @@ import profileImage from '../assets/images/User-Profile.png';
 import { MenuItem } from "@/types/types";
 
 
-
+// Link items
 const menuItems: MenuItem[] = [
   {
     icon: <GrAppsRounded size={25} />, label: "Dashboard", active: false,
@@ -64,6 +64,11 @@ export default function Sidebar({ isMobileOpen, toggleMobileSidebar }: SidebarPr
       [label]: !prev[label],
     }));
   };
+
+  useEffect(()=>{
+   
+    setExpanded({})
+  },[isMobileOpen])
 
 
 
