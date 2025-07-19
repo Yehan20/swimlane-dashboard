@@ -31,7 +31,7 @@ Friendly and Simple dashboard to complete tasks
 Make sure you have the following installed:
 
 
-- [Node.js](https://nodejs.org/) & [npm](https://www.npmjs.com/) — **Latest version required**
+- [Node.js](https://nodejs.org/)  — **Latest version required**
 
 
 
@@ -54,24 +54,21 @@ git remote add origin https://github.com/<your-github-username>/<your-repo-name>
 ```
 
 
-### Frontend Setup
-
-
-1. Install dependencies:
+Install dependencies:
 
    ```bash
    npm install
    ```
 
-2. Start the development server:
+Start the development server:
 
    ```bash
    npm run dev
    ```
 
-   The frontend will be available at `http://localhost:3000`.
+The application will be available at `http://localhost:3000`.
 
-3. You can update the tasks.json file to add new items  
+You can update the tasks.json file to add new items  
 
 
 
@@ -79,13 +76,13 @@ git remote add origin https://github.com/<your-github-username>/<your-repo-name>
 
 This project is deployed using the following free services:
 
-- **Frontend** is hosted on [Netlify](https://www.netlify.com/)
+- **Application** is hosted on [Netlify](https://www.netlify.com/)
 
 
 ###  Deployment Resources
 
 You can learn more about deployment from the official documentation:
 
-- [Netlify Docs (Frontend Hosting)](https://docs.netlify.com/)
+- [Netlify Docs (Hosting)](https://docs.netlify.com/)
 
 
