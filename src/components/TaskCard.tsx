@@ -53,7 +53,7 @@ export default function TaskCard({ task }: TaskCardProps) {
             {/* Render collaborators */}
             <div className="flex mb-3 items-center">
                 {Array(task.collaborators).fill(task.collaborators).slice(0, 3).map((d, index) => {
-                    return <span key={index} className="flex justify-center overflow-hiddenrounded-full border border-white rounded-full  -mr-2">
+                    return <span key={index} className="flex justify-center  h-[25px] w-[25px] overflow-hiddenrounded-full border border-white rounded-full  -mr-2">
                         <Image className='w-full'  src={profile} alt="placeholder image" />
                     </span> 
                 })}

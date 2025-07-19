@@ -17,12 +17,12 @@ export const getCategoryStyle = (category: string) => {
     switch (category) {
         case "Research":
             return { bg: "bg-orange", text: 'text-dark' };
-        case "Design":
+        case "Development":
             return { bg: "bg-green", text: 'text-dark' };
         case "UX Reserch":
             return { bg: "bg-red", text: 'text-white' };
         case "Feedback":
-            return { bg: "bg-bue", text: 'text-white' };
+            return { bg: "bg-blue", text: 'text-white' };
         default:
             return { bg: "bg-neutral-6", text: 'text-dark' };
     }

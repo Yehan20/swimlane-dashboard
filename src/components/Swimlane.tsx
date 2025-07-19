@@ -8,12 +8,12 @@ import { useTaskStore } from "@/providers/task-store-provider";
 import { Task } from "@/types/types";
 import { getStatusStyle } from "@/utils";
 
-interface TaskListProps {
+interface SwimlaneProps {
     status: string;
     tasks: Task[];
 }
 
-export default function TaskList({ status, tasks }: TaskListProps) {
+export default function Swimlane({ status, tasks }: SwimlaneProps) {
 
     const updateTaskStatus = useTaskStore(state => state.updateTaskStatus)
 
