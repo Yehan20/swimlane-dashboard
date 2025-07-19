@@ -9,11 +9,12 @@ Friendly and Simple dashboard to complete tasks
 
 ## Features
 
-- Task Search
-- Task Drag and Drop
-- Auto change of last Update time
-- Auto Sort of tasks by updated time when dragged and drop in different status block
-- Auto change color stripe of each task change based on status
+- Task Search functionality
+- Drag and Drop support for tasks
+- Automatic update of the “Last Updated” timestamp
+- Auto-sorting tasks by update time when moved between status columns
+- Dynamic color stripe changes on tasks based on their status
+
 
 
 ## Technology Stack
