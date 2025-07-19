@@ -17,7 +17,7 @@
     "dueDate": "2025-07-19",
     "priority": "High",
     "comments": 1,
-    "category": "Research",
+    "category": "UX Reserch",
     "status": "In Progress",
     "collaborators": 6
   },
@@ -27,10 +27,10 @@
     "dueDate": "2025-05-24",
     "priority": "Medium",
     "comments": 2,
-    "category": "Research",
+    "category": "Feedback",
     "status": "Approved",
     "collaborators": 4,
-    "image": "/images/cat.jpg",
+
     "reports": 8,
     "notificationType": "Group Call"
   },
