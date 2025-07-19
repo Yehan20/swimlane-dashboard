@@ -7,10 +7,10 @@ import Image from "next/image";
 import { format } from "date-fns";
 
 
-import placeholderImg from '../assets/images/Vector.png'
+import placeholderImg from '../assets/images/User-Profile.png'
 
 import { useTaskStore } from "@/providers/task-store-provider";
-import TaskList from "@/components/TaskList";
+import Swimlane from "@/components/Swimlane";
 import Spinner from "@/components/Spinner";
 
 
@@ -53,7 +53,7 @@ export default function Page() {
     <div className="flex flex-col h-full  pt-[70px] container m-0">
 
       {/* Home page header section */}
-      <div className="bg-white pt-[155px] pb-4 px-6 md:pt-9 md:pb-6">
+      <div className="bg-white pt-[155px] pb-4 px-6 md:pt-7 md:pb-6">
         <div className="flex items-center gap-5 mb-4">
           <h1 className="font-semibold text-2xl">Sport Xi Project </h1>
           <span className=" rounded bg-orange font-medium text-xs px-3 py-1">
@@ -101,9 +101,9 @@ export default function Page() {
       {loading ? (
         <Spinner />
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-4 border-t border-[#E6E8EC] h-full">
+        <div className="grid grid-cols-1 lg:grid-cols-4 border-t border-[#E6E8EC] h-full">
           {statuses.map((status) => (
-            <TaskList
+            <Swimlane
               key={status}
               status={status}
               tasks={sortedTasks.filter((task) => task.status === status)}
