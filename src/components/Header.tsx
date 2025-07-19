@@ -49,6 +49,7 @@ export default function Header({ toggleSidebar }: HeaderProps) {
 
       {/* Search bar */}
       <div className="flex flex-col md:flex-row  gap-3">
+
         <button className="flex gap-2 items-center cursor-pointer  bg-blue font-semibold text-white px-4 py-[10px] text-xs
          rounded-md hover:opacity-80
         ">Create new board <FaPlus /></button>
@@ -62,7 +63,7 @@ export default function Header({ toggleSidebar }: HeaderProps) {
             placeholder="Search tasks..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="p-1 focus:outline-0 border-0 text-sm w-64 placeholder:text-neutral-5"
+            className="md:p-1 md:text-sm focus:outline-0 border-0 text-xs w-64 placeholder:text-neutral-5"
           />
         </div>
 
